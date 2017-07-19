@@ -9,6 +9,7 @@ class RangeDict(dict):
             return super().__getitem__(item)
 
 class character:
+
     DB = RangeDict({range(2,64) : ('-2',-2), range(65,84) : ('-1',-1), range(85,124) : ('',0), range(125,164) : ('+1d4',1), range(165,204) : ('+1d6',2), range(205,284) : ('+2d6',3), range(285,364) : ('+3d6',4), range(365,444) : ('+4d6',5), range(445,524) : ('+5d6',6)})
 
     def __init__(self,f):
@@ -50,3 +51,8 @@ class character:
             rolls = [r.randint(1,D) for x in rolls]
             return sum(rolls)*5
 
+        def combat(combatstr):
+            s = combatstr.split(', ')
+            output = []
+            for skill in s:
+                split = skill.split(' ')
