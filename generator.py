@@ -4,7 +4,7 @@ class character:
 		
 		def __init__(self,f):
 			
-			self.file = fileread(f)
+			self.content = fileread(f)
 			
 		def fileread(f):
 			expect = ["NAME","EDITION","STR","DEX","CON","APP","SIZ","INT","POW","COMBAT","GENERAL"]
@@ -16,7 +16,7 @@ class character:
 			for l in content:
 				found.append(l.split('\t')[0])
 			diff = lambda l1,l2: [x for x in l1 if x not in l2]
-			d = set(diff(found,expect))
+			d = set(diff(found,expect)) + set(diff(expect,found))
 			if d:
 				raise Exception("Invalid values: {}. Check source file for missing values/duplicates".format(', '.join(d)))
 			content = {x.split('\t')[0] : x.split('\t')[1] for x in content}
