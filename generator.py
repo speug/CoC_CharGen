@@ -1,3 +1,5 @@
+import random as r
+
 class character:
 		
 		def __init__(self,f):
@@ -19,3 +21,10 @@ class character:
 				raise Exception("Invalid values: {}. Check source file for missing values/duplicates".format(', '.join(d)))
 			content = {x.split('\t')[0] : x.split('\t')[1] for x in content}
 			return content
+
+                def roll(rollstr):
+                    s = rollstr.split('d')
+                    D = s[1]
+                    rolls = [0] * s[0]
+                    rolls = [r.randint(1,D) for x in rolls]
+                    return sum(rolls)

@@ -1,11 +1,11 @@
 NAME	Normal Brotherhood Cultist
 EDITION	6
-STR		3d6
-DEX		3d6
-CON		3d6
-APP		3d6
-SIZ		3d6
-INT		3d6
-POW		3d6
+STR	3d6
+DEX	3d6
+CON	3d6
+APP	3d6
+SIZ	3d6
+INT	3d6
+POW	3d6
 COMBAT	Cult Club (30-60) 1d6+DB, .32 Pistol (50/10-30) 1d8, Fighting(Brawl) (20-65)
 GENERAL	Listen (20-40), Spot Hidden (30-50), Climb (20-40)
