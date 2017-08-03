@@ -46,8 +46,8 @@ class character:
 
         def roll(self,rollstr):
             s = rollstr.split('d')
-            D = s[1]
-            rolls = [0] * s[0]
+            D = int(s[1])
+            rolls = [0] * int(s[0])
             rolls = [r.randint(1,D) for x in rolls]
             return sum(rolls)*5
 
